@@ -1,2 +1,3 @@
-# doppioristretto.github.io
-GitHub Pages Site
+# Home
+
+This is the site of Brady Semm (DoppioRistretto)
