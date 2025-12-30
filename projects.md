@@ -16,4 +16,4 @@ Velociraptor artifact that uses the Docker UNIX socket to export a Docker image 
 
 #### [MacOS.ParallelsVM.SuspendedMemory](https://docs.velociraptor.app/exchange/artifacts/pages/macos.parallelsvm.suspendedmemory/)
 
-Velociraptot artifact that looks for suspended Parallels VM owned by any user on a MacOS system. Can automatically upload the virtual memory files if found.
+Velociraptor artifact that looks for suspended Parallels VMs owned by any user on a MacOS system. Can automatically upload the virtual memory files if found.
