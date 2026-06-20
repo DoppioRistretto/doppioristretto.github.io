@@ -1,0 +1,20 @@
+<!-- start custom head snippets -->
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.masthead__dropdown-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var item = btn.closest('.masthead__menu-item--dropdown');
+        item.classList.toggle('is-open');
+      });
+    });
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.masthead__menu-item--dropdown.is-open').forEach(function (el) {
+        el.classList.remove('is-open');
+      });
+    });
+  });
+</script>
+<!-- end custom head snippets -->

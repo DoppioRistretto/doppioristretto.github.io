@@ -1,4 +1,35 @@
-theme: jekyll-theme-midnight
-title: Brady Semm (DoppioRistretto)
-description: Information Security Engineer - Projects and Ramblings
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "dark"
+
+title: "DoppioRistretto"
+name: "Brady Semm"
+description: "Information Security Engineer — Projects and Ramblings"
+url: "https://doppioristretto.github.io"
+
+author:
+  name: "Brady Semm"
+  avatar: "/assets/images/soundwave.jpg"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DoppioRistretto"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/brady-semm/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:btsemm@protonmail.com"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-include-cache
+
 show_downloads: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author_profile: true

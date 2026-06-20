@@ -1,0 +1,61 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth >= 1024) return;
+  setTimeout(function() {
+    var toggle = document.querySelector('.greedy-nav__toggle');
+    var visLinks = document.querySelector('.greedy-nav .visible-links');
+    var hidLinks = document.querySelector('.greedy-nav .hidden-links');
+    if (!toggle || !visLinks || !hidLinks) return;
+    var items = Array.from(visLinks.children);
+    if (items.length === 0) return;
+    items.forEach(function(li) { hidLinks.appendChild(li); });
+    toggle.classList.remove('hidden');
+  }, 0);
+});
+</script>
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
+        <ul class="visible-links">
+          {%- for link in site.data.navigation.main -%}
+            {% if link.children %}
+              <li class="masthead__menu-item masthead__menu-item--dropdown">
+                <button class="masthead__dropdown-toggle">{{ link.title }} <span class="masthead__dropdown-arrow">&#9660;</span></button>
+                <ul class="masthead__dropdown">
+                  {% for child in link.children %}
+                    <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="masthead__menu-item">
+                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              </li>
+            {% endif %}
+          {%- endfor -%}
+        </ul>
+        {% if site.search == true %}
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <i class="fas fa-search"></i>
+        </button>
+        {% endif %}
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

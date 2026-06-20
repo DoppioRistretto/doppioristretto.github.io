@@ -1,0 +1,13 @@
+main:
+  - title: "Projects"
+    url: /projects
+  - title: "Writing"
+    url: /blog
+  - title: "Contact Me"
+    children:
+      - title: "GitHub"
+        url: https://github.com/DoppioRistretto
+      - title: "LinkedIn"
+        url: https://www.linkedin.com/in/brady-semm/
+      - title: "Email"
+        url: mailto:btsemm@protonmail.com
