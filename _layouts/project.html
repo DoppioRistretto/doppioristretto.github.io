@@ -1,0 +1,11 @@
+---
+layout: single
+---
+
+{% if page.language or page.github %}<p class="project-meta">{% if page.language %}{{ page.language }}{% endif %}{% if page.platform %} &middot; {{ page.platform }}{% endif %}{% if page.github %} &nbsp;&mdash;&nbsp;<a href="{{ page.github }}" target="_blank" rel="noopener">View on GitHub &rarr;</a>{% endif %}</p>{% endif %}
+
+{{ content }}
+
+<a href="/projects">&larr; Back to Projects</a>
+
+{% include sidebar-toc.html %}

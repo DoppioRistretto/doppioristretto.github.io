@@ -26,6 +26,58 @@
   }
 }
 
+// Project detail page meta line
+.project-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 1.4em;
+
+  a {
+    color: #7eb8f7;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Sidebar TOC injected on project detail pages
+.sidebar-toc {
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: 1px solid #2a2a2a;
+
+  .sidebar-toc__label {
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #555;
+    margin-bottom: 0.7em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      a {
+        display: block;
+        font-size: 0.82em;
+        color: #999;
+        text-decoration: none;
+        padding: 3px 0;
+        transition: color 0.15s ease;
+
+        &:hover, &.active { color: #7eb8f7; }
+      }
+
+      ul {
+        padding-left: 0.85em;
+      }
+    }
+  }
+}
+
 // Project entry polish
 section h3 {
   margin-bottom: 4px;
@@ -213,6 +265,11 @@ section hr {
 // Allow dropdown to extend outside the nav bar (overrides theme overflow:hidden)
 .greedy-nav .visible-links {
   overflow: visible;
+}
+
+// Uniform spacing for all nav items — theme applies margin to <a> only, not <button>
+.greedy-nav .visible-links li {
+  margin: 0 0.15rem;
 }
 
 // Nav dropdown
