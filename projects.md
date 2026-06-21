@@ -3,7 +3,7 @@ layout: single
 title: Projects
 ---
 
-### [TARDIS](./tardis)
+### [TARDIS](./projects/tardis)
 
 _Tar Dis and Untar Dat_ &mdash; Go &middot; cross-platform
 
