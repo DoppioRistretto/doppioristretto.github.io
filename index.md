@@ -18,8 +18,8 @@ intro:
     <a class="cert-acronym" href="https://www.giac.org/certifications/certified-forensic-analyst-gcfa/" target="_blank" rel="noopener">GCFA</a>
     <div class="cert-name">GIAC Certified Forensic Analyst</div>
   </div>
-  <div class="cert-card in-progress">
-    <div class="cert-status-badge">In Progress</div>
+  <div class="cert-card earned">
+    <div class="cert-status-badge">Earned</div>
     <a class="cert-acronym" href="https://www.giac.org/certifications/ai-security-automation-engineer-gasae" target="_blank" rel="noopener">GASAE</a>
     <div class="cert-name">GIAC AI Security Automation Engineer</div>
   </div>
